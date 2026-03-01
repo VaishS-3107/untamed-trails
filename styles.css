@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #F7F9FB;
+  --primary: #BFD8E6;
+  --secondary: #F7C8C4;
+  --accent: #CDE7D8;
+  --text: #34495E;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+/* NAVBAR */
+header {
+  padding: 20px 10%;
+  background: var(--white);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+/* HERO SECTION */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 12% 80px 12%;  /* top right bottom left */
+  align-items: center;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Default circle style */
+.circle-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s ease;
+  border: 3px solid var(--primary);
+}
+
+/* 1st circle - LEFT */
+.hero-left .circle-img:nth-child(1) {
+  align-self: flex-start;
+}
+
+/* 2nd circle - CENTER */
+.hero-left .circle-img:nth-child(2) {
+  align-self: center;
+}
+
+/* 3rd circle - LEFT */
+.hero-left .circle-img:nth-child(3) {
+  align-self: flex-start;
+}
+
+.circle-img:hover {
+  transform: scale(1.1);
+}
+
+.hero-right h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.hero-right h3 {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  background: var(--secondary);
+  padding: 14px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* GRID SECTION */
+.section {
+  padding: 80px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  padding: 35px;
+  border-radius: 25px;
+  background: var(--secondary);
+  transition: 0.4s ease;
+}
+
+.card:nth-child(2n) {
+  background: var(--primary);
+}
+
+.card:nth-child(3n) {
+  background: var(--accent);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+/* REVIEWS */
+.review-section {
+  padding: 80px 12%;
+  text-align: center;
+}
+
+.review-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.review-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 5px solid var(--primary);
+}
+
+
+/* FORM */
+form {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #E0E0E0;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: var(--secondary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1%;
+  margin-top: 10px;
+  font-size: 14px;
+  background: var(--white);
+}
